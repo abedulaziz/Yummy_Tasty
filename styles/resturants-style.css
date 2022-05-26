@@ -1,0 +1,96 @@
+
+:root {
+  --theme-color: #2b0505f0;
+  --theme-color-two: rgb(70, 70, 70);
+}
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  background-color: #FFF;
+  color: #000;
+}
+
+.container {
+  padding: 0 7vw;
+}
+
+header {
+  padding: 20px 0;
+  background-color: #141317;
+  color: #FFF;
+}
+
+header .header_content {
+  display: flex;
+}
+
+header .header_content .profile-sec {
+  margin-left: auto;
+}
+
+header .header_content .profile-sec img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+
+.resturants_list {
+  color: #FFF;
+}
+
+.resturants_list .res-head {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.resturants_list .res-head h2 {
+  font-size: 30px;
+  margin: 0 0 5px;
+  color: #000;
+}
+
+.resturants_list .res-head p {
+  color:rgb(70, 70, 70)
+}
+
+.resturants_list .resturant {
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #000;
+  margin-bottom: 30px;
+  background-color: var(--theme-color);
+}
+
+.resturants_list .resturant:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.resturants_list .resturant > div {
+  width: 50%;
+  height: 100%;
+}
+
+/* .resturants_list .resturant > div . */
+
+.resturants_list .resturant .res_profile_img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.resturants_list .resturant .res-about {
+  padding: 20px;
+}
+
+.resturants_list .resturant .res-about .describtion {
+  line-height: 27px;
+  font-size: 18px;
+}
+
+.resturants_list .resturant .res-about .res_details{
+  margin-top: 10px;
+}
+
+.resturants_list .resturant .res-about .res_details a{
+  color:rgb(122, 122, 122);
+}
