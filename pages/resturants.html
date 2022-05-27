@@ -8,11 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet"> 
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/764892ac1a.js" crossorigin="anonymous"></script>
   <!-- normalize CSS file -->
   <link rel="stylesheet" href="./../styles/normalize.css">
   <!-- resturants page main CSSS -->
   <link rel="stylesheet" href="./../styles/resturants-style.css">
   <title>Resturants</title>
+  <link rel="icon" type="image/x-icon" href="./../assets/fav_icon/favorite_icon.png">
 </head>
 <body>
   
@@ -21,15 +24,13 @@
 
       <div class="header_content">
 
-        <div class="logo-wrapper">test</div>
+        <div class="logo-wrapper"><img src="./../assets/fav_icon/favorite_icon.png" alt="Yummy Tasty"></div>
 
         <div class="profile-sec">
-          <img src="./../assets/images/images.png" alt="user profile image">
+          Name_of_user <i class="fa-solid fa-caret-down"></i>
         </div>
 
       </div>
-
-
     </div>
   </header>
 
@@ -43,7 +44,9 @@
   
       <div class="resturant">
         <div class="res_profile_img">
-          <img src="./../assets/images/resturant_1.jpg" alt="">
+          <div class="img-wrapper">
+            <img src="./../assets/images/resturant_1.jpg" alt="">
+          </div>
         </div>
         <div class="res-about">
           <h3 class="res_name">Lorem ipsum dolor</h3>
@@ -53,7 +56,9 @@
       </div>
       <div class="resturant">
         <div class="res_profile_img">
-          <img src="./../assets/images/resturant_2.jpg" alt="">
+          <div class="img-wrapper">
+            <img src="./../assets/images/resturant_2.jpg" alt="">
+          </div>
         </div>
         <div class="res-about">
           <h3 class="res_name">Lorem ipsum dolor</h3>
@@ -63,7 +68,9 @@
       </div>
       <div class="resturant">
         <div class="res_profile_img">
-          <img src="./../assets/images/resturant_3.jpg" alt="">
+          <div class="img-wrapper">
+            <img src="./../assets/images/resturant_3.jpg" alt="">
+          </div>
         </div>
         <div class="res-about">
           <h3 class="res_name">Lorem ipsum dolor</h3>
@@ -73,7 +80,9 @@
       </div>
       <div class="resturant">
         <div class="res_profile_img">
-          <img src="./../assets/images/resturant_4.jpg" alt="">
+          <div class="img-wrapper">
+            <img src="./../assets/images/resturant_4.jpg" alt="">
+          </div>
         </div>
         <div class="res-about">
           <h3 class="res_name">Lorem ipsum dolor</h3>
@@ -84,6 +93,20 @@
   
     </div>
   </div>
+
+  <footer>
+    <div class="container">
+      <div class="copy-right">
+        Copyright &copy; 2022
+      </div>
+      <div class="social-media">
+        <div class="instagram"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></div>
+        <div class="facebook"><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></div>
+        <div class="linkedin"><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></div>
+        <div class="github"><a href="https://github.com/abedulaziz/Yummy_Tasty"><i class="fa-brands fa-github"></i></a></div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>

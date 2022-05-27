@@ -1,7 +1,7 @@
 
 :root {
   --theme-color: #2b0505f0;
-  --theme-color-two: rgb(70, 70, 70);
+  --theme-color-two: #141317;
 }
 
 body {
@@ -16,12 +16,17 @@ body {
 
 header {
   padding: 20px 0;
-  background-color: #141317;
+  background-color: var(--theme-color-two);
   color: #FFF;
 }
 
 header .header_content {
   display: flex;
+  align-items: center;
+}
+
+header .header_content .logo-wrapper img {
+  width: 50px;
 }
 
 header .header_content .profile-sec {
@@ -56,30 +61,36 @@ header .header_content .profile-sec img {
 .resturants_list .resturant {
   display: flex;
   height: 300px;
-  overflow: hidden;
   box-shadow: 0 0 20px #000;
   margin-bottom: 30px;
   background-color: var(--theme-color);
+  width: 85%;
 }
 
 .resturants_list .resturant:nth-child(odd) {
   flex-direction: row-reverse;
+  margin-left: auto;
+  
 }
 
 .resturants_list .resturant > div {
   width: 50%;
   height: 100%;
+  padding: 20px;
+  overflow: hidden;
 }
 
-/* .resturants_list .resturant > div . */
+.resturants_list .resturant .res_profile_img .img-wrapper {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
 
 .resturants_list .resturant .res_profile_img img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
-}
-
-.resturants_list .resturant .res-about {
-  padding: 20px;
+  box-shadow: 5px 5px 20px #000;
 }
 
 .resturants_list .resturant .res-about .describtion {
@@ -93,4 +104,29 @@ header .header_content .profile-sec img {
 
 .resturants_list .resturant .res-about .res_details a{
   color:rgb(122, 122, 122);
+}
+
+
+footer {
+  background-color: var(--theme-color-two);
+  color: #FFF;
+  padding: 20px 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+footer .social-media {
+  display: flex;
+}
+
+footer .social-media > div:not(:last-child) {
+  margin-right: 20px;
+}
+
+footer .social-media a {
+  color: #FFF;
 }
