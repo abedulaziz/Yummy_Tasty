@@ -1,0 +1,71 @@
+
+:root {
+  --theme-color: #2b0505f0;
+  --theme-color-two: #141317;
+  --text-second-color: rgb(70, 70, 70);
+}
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  background-color: #FFF;
+  color: #000;
+  min-height: 100vh;
+  padding-bottom: 58.4px;
+  position: relative;
+}
+
+.container {
+  padding: 0 7vw;
+}
+
+header {
+  padding: 20px 0;
+  background-color: var(--theme-color-two);
+  color: #FFF;
+}
+
+header .header_content {
+  display: flex;
+  align-items: center;
+}
+
+header .header_content .logo-wrapper img {
+  width: 50px;
+}
+
+header .header_content .profile-sec {
+  margin-left: auto;
+}
+
+header .header_content .profile-sec img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+footer {
+  background-color: var(--theme-color-two);
+  color: #FFF;
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+footer .social-media {
+  display: flex;
+}
+
+footer .social-media > div:not(:last-child) {
+  margin-right: 20px;
+}
+
+footer .social-media a {
+  color: #FFF;
+}
