@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet"> 
   <!-- main CSS file -->
   <link rel="stylesheet" href="./styles/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <title>YummyTasty - Sign In</title>
   <link rel="icon" type="image/x-icon" href="./assets/fav_icon/tab_favorite_icon.png">
 </head>
@@ -19,7 +20,7 @@
   <div class="sign-in account_issues">
     <div class="container">
       <div class="content">
-        <form action="#">
+        <form id="signinform" onsubmit="return false;">
           <div class="sign-in_head account-header">
             <h1>Sign In</h1>
             <p>Let's retrieve your account.</p>
@@ -37,15 +38,17 @@
           </div>
 
           <div class="sign-in_butt">
-            <input type="submit" value="Sign In">
+            <input type="submit" value="Sign In" id="btn-login">
           </div>
         </form>
 
         <div class="has-account">
-          <p>New to our application? <a href="#">Sign Up</a></p>
+          <p>New to our application? <a href="./pages/sign-up.html">Sign Up</a></p>
         </div>
       </div>
     </div>
   </div>
+
+  <script src="javascript/loginscript.js"></script>
 </body>
 </html>
