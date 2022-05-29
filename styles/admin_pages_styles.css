@@ -21,9 +21,12 @@ tr:not(:first-child):nth-child(odd) {
   background-color: #f2f2f2;
 }
 
-table tr.table-headers th:not(:last-child){
+table tr.table-headers th{
   border-bottom: 1px solid gray;
   height: 50px;
+}
+table#manageRes tr.table-headers th:last-child{
+  border-bottom: none
 }
 
 
@@ -51,6 +54,19 @@ table#users {
 
 /* upload resturants */
 
+.upload_resturant .container {
+  display: flex;
+  justify-content: center;
+}
+
+.upload_resturant .content {
+  display: inline-block;
+}
+
+.upload_resturant .content form h2 {
+  text-align: center;
+}
+
 .upload_resturant .content form > div {
   margin-bottom: 20px;
 }
@@ -70,4 +86,20 @@ table#users {
 .upload_resturant .content form > div label{
   display: block
 
+}
+
+/* manage reviews */
+
+#reviews #status > div i{
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.green {
+ color :green;
+}
+
+.red {
+  color: rgb(186, 0, 0);
 }
