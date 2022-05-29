@@ -67,3 +67,19 @@
 }
 
 
+/* media queries */
+@media (max-width: 1054px) {
+  .resturants_list .resturant {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .resturants_list .resturant {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .resturants_list .resturant > div {
+    width: 100%;
+  }
+}
