@@ -2,10 +2,34 @@ body {
   font-family: 'Hind Siliguri', sans-serif;
 }
 
+a {
+  color: #FFF;
+}
+
 .container {
   padding: 0 7vw;
 }
 
+header {
+  background-color: rgb(90, 122, 122);
+  color: #FFF;
+}
+
+header .content ul {
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+}
+
+header .content ul li {
+  /* display: inline-block; */
+  padding: 20px;
+  width: 25%;
+}
+
+header .content ul li.active {
+ border-bottom: 3px solid rgb(151, 255, 203); 
+}
 
 caption {
   font-size: 25px;
