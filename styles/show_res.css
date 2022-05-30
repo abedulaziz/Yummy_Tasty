@@ -3,16 +3,23 @@
   --theme-color-two: rgb(70, 70, 70);
 } */
 
+h3, h4 {
+  margin: 0;
+}
+
+.reviewed {
+  background-color: #37131397 !important;
+  cursor:initial !important;
+}
+
 .res_details .content{
   display: flex;
-  margin-top: calc((100vh - 65.15835px) / 2);
-  transform: translateY(-50%);
+  margin: 50px 0;
 }
 
 .res_details .content > div {
   width: 50%;
 }
-
 
 .res_details .content .res_profile_pic img {
   object-fit: cover;
@@ -40,6 +47,120 @@
 .res_details .content .details .res_desc {
   line-height: 1.8;
   color: var(--theme-color);
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.res_details .content .details #res_rate {
+  padding: 7px 12px;
+  background-color: #141317;
+  display: inline-block;
+  color: #FFF;
+  border: none;
+  border-radius: 4px;
+}
+
+.res_details .content .details #res_rate #stars{
+  font-size: 20px;
+}
+
+.res_details .content .details #res_rate i.fa-solid.fa-star {
+  font-size: 13px;
+}
+
+/* reviews */
+
+
+
+.reviews .content .add-review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 0;
+}
+
+.reviews .content .add-review .username  {
+  margin: 0;
+}
+
+.reviews .content .add-review .add_review_butt {
+  padding: 10px;
+  background-color: var(--theme-color);
+  color: #FFF;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+.separator {
+  height: 1px;
+  background-color: gray;
+  margin: 20px 0;
+}
+
+.reviews .content .current_user_review {
+  background-color: var(--theme-color);
+  margin-bottom: 20px;
+  color: #FFF;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.reviews .content .current_user_review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews .content .current_user_review > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.reviews .content .current_user_review .rev_status {
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+}
+
+.reviews .content .current_user_review .rev_status > div {
+  background-color: #141317;
+  padding:10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reviews .content .current_user_review .rev_status .cancel {
+  background-color: #fff;
+  color: #141317;
+  border: 3px solid #141317;
+}
+
+.reviews .content .current_user_review  textarea {
+  width: 300px;
+  border: 2px solid gray;
+  resize: none;
+  height: 70px;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.reviews .content .res_reviews .review {
+  margin-bottom: 30px;
+}
+
+.reviews .content .res_reviews .review .username {
+  margin-bottom: 0;
+}
+
+.reviews .content .res_reviews .review .review_rate {
+  margin: 5px 0;
+  color: rgb(255, 217, 0)
+}
+
+.reviews .content .res_reviews .review .user_feedback {
+  font-size: 18px;
 }
