@@ -1,7 +1,11 @@
 <?php
 //signup 
+<<<<<<< HEAD
 
 $test = include("connection.php");
+=======
+include("connection.php");
+>>>>>>> 0e0fe920daf166562068864ecea230f70a9f69be
 
 
   $first_name = $_POST["fname"];

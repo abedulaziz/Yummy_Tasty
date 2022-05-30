@@ -10,9 +10,13 @@ $response = [];
 while($restaurant = $array->fetch_assoc()){
     $response[] = $restaurant;
 } 
+<<<<<<< HEAD
 // $checkconnection["success"] = "success";
 // $json = json_encode($checkconnection);
 // echo $json;
+=======
+
+>>>>>>> 0e0fe920daf166562068864ecea230f70a9f69be
 $json = json_encode($response);
 echo $json;
 ?>
