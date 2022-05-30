@@ -2,7 +2,7 @@
 //signup 
 include("connection.php");
 
-$first_name = $_POST["fname"];j
+$first_name = $_POST["fname"];
 $last_name = $_POST["lname"];
 $email = $_POST["email"];
 $password = hash("sha256", $_POST["password"]);
