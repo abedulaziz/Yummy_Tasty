@@ -1,0 +1,45 @@
+/* :root {
+  --theme-color: #2b0505f0;
+  --theme-color-two: rgb(70, 70, 70);
+} */
+
+.res_details .content{
+  display: flex;
+  margin-top: calc((100vh - 65.15835px) / 2);
+  transform: translateY(-50%);
+}
+
+.res_details .content > div {
+  width: 50%;
+}
+
+
+.res_details .content .res_profile_pic img {
+  object-fit: cover;
+  width: 85%;
+  margin: auto;
+  display: block;
+  box-shadow: 0 0 10px ;
+  background-color: var(--theme-color);
+}
+
+.res_details .content .details {
+  padding: 20px;
+}
+
+.res_details .content .details .res_name {
+  margin-bottom: 0;
+}
+
+.res_details .content .details .res_address {
+  font-size: 20px;
+  margin: 5px 0 20px;
+  color: gray;
+}
+
+.res_details .content .details .res_desc {
+  line-height: 1.8;
+  color: var(--theme-color);
+  font-size: 17px;
+  font-weight: 500;
+}
