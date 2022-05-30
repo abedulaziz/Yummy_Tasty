@@ -1,10 +1,6 @@
 <?php
 
-
 include("connection.php");
-//how to get the value from body
-//axios
-// return array / objects
 
 $email = $_POST["email"];
 $password = hash("sha256", $_POST["password"]);
@@ -25,6 +21,7 @@ if($num_rows == 0){
     $response["user_id"] = $user_id;
     $resposne["type"] = $type;
 }
+
 $json = json_encode($response);
 echo $json;
 ?>
