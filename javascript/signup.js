@@ -2,6 +2,7 @@
     document.getElementById("signup").addEventListener("click",function (){
       var form = document.querySelector('form');
       var formdata = new FormData(form);
+      console.log(formdata)
       
       
       axios({
