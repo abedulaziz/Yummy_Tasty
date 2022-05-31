@@ -4,8 +4,7 @@ document.getElementById("upload-restaurant").addEventListener("click",  ()=> {
     const resName = document.getElementById("resName").value;
     const resDesc = document.getElementById("resDesc").value;
     const resAddress = document.getElementById("resAddress").value;
-    const profilePic = document.getElementById("profilePic").value;
-    var formdata = new FormData();
+    const profilePic = document.getElementById("profilePic").files[0].name;//resolve the fake path issue
     formdata.append('resName', resName);
     formdata.append('resDesc', resDesc);
     formdata.append('resAddress', resAddress);

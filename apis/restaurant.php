@@ -18,7 +18,7 @@ if($num_rows == 0){
     $response["response"] = "success";
     $response["restaurant_name"] = $restaurant_name;
     $response["description"] = $description;
-    $resposne["profile_pic"] = $profile_pic;
+    $response["profile_pic"] = $profile_pic;
     $response["address"] = $address;
 }
 $json = json_encode($response);
