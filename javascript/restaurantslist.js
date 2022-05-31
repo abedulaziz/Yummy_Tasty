@@ -18,7 +18,7 @@ try {
   
       let rest = document.createElement("div")
       rest.className = "resturant"
-      rest.id = i
+      rest.id = data.restaurant_id;
       
       let resProfileImg = document.createElement("div")
       resProfileImg.className = "res_profile_img"
