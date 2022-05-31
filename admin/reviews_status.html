@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./../styles/normalize.css">
     <!-- admin page styles -->
     <link rel="stylesheet" href="./../styles/admin_pages_styles.css">
+    <!-- axios script -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Manage Reviews</title>
     <link rel="icon" type="image/x-icon" href="./../assets/fav_icon/tab_favorite_icon.png">
   </head>
@@ -32,18 +34,19 @@
     </div>
   </header>
   
-  <div class="container">
+  <div class="container" style="text-align: -webkit-center;">
     <table id="reviews">
       <caption>Reviews</caption>
   
       <tr class="table-headers">
-        <th>User Name</th>
+        <th>Email</th>
+        <th>Restaurant</th>
         <th>Description</th>
         <th>Rate</th>
         <th>Review Status</th>
       </tr>
   
-      <tr>
+      <!-- <tr>
         <td>Mahmoud Mhammad</td>
         <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, dignissimos quidem quasi accusantium temporibus, vel autem ad animi facere </td>
         <td>4/5</td>
@@ -58,10 +61,10 @@
         <td id="status">
           <div><i class="fa-solid fa-circle-check green"></i><i class="fa-solid fa-circle-xmark red"></i></div>
         </td>
-      </tr>
+      </tr> -->
   
     </table>
   </div>
-
+<script src="../javascript/monitor-reviews.js"></script>
 </body>
 </html>

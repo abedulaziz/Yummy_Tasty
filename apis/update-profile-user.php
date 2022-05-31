@@ -1,5 +1,5 @@
 <?php
-//Approved review
+//update profile
 include("connection.php");
 
 $user_id = $_POST["user_id"];
