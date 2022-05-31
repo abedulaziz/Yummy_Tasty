@@ -21,12 +21,13 @@ if(!empty($_POST["gender"])){
   
   $query = $mysqli->prepare("INSERT INTO users(first_name,last_name, email, password, gender, phone_number, type) 
   VALUES (?, ?, ?, ?, ?, ?, ?)");
+  $lastInsertedPeopleId = $query->insert_id;
   $query->bind_param("sssssss", $first_name, $last_name, $email, $password, $gender, $phone_number, $type);
   $query->execute();
-  
+  $lastInsertedPeopleId = $query->insert_id;
   $response = [];
   $response["name"] = $first_name;
-  $response["email"] = $email;
+  $response["user_id"] = $lastInsertedPeopleId;
   $response["response"] = "success";
   
   $json = json_encode($response);
