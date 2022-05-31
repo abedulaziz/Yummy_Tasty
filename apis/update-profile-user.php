@@ -6,10 +6,11 @@ $user_id = $_POST["user_id"];
 $first_name = $_POST["first_name"];
 $last_name = $_POST["last_name"];
 $email = $_POST["email"];
+$password = $_POST["password"];
 $phone_number = $_POST["phone_number"];
 
-$query = $mysqli->prepare("UPDATE users set first_name = ?, last_name = ?, email = ?, phone_number = ? where user_id = $user_id");
-$query->bind_param("ssss",$first_name,$last_name,$email,$phone_number);
+$query = $mysqli->prepare("UPDATE users set first_name = ?, last_name = ?, email = ?, password = ?, phone_number = ? where user_id = $user_id");
+$query->bind_param("sssss",$first_name,$last_name,$email,$password,$phone_number);
 $query->execute();
 
 $response = [];

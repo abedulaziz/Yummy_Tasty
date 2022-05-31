@@ -1,8 +1,6 @@
 
 document.getElementById("username").textContent = localStorage.getItem("username").toUpperCase()
 
-
-
 userID = new FormData()
 userID.append("user_id", localStorage.getItem("user_id"))
 
@@ -36,11 +34,33 @@ retrieveUserInfo.then(res => {
 })
 
 
-
 const overlay = document.querySelector(".overlay")
 const editButton = document.getElementById("editProfile")
+const editInfo = document.getElementById("editInfo")
+
+const submitButt = document.getElementById("editInfoButt"),
+      cancelButt = document.getElementById("cancelEdit")
 
 editButton.addEventListener("click", () => {
   overlay.style.display= "block"
+  editInfo.style.display = "block"
 
+  submitButt.addEventListener("click",() => {
+
+    if ()
+    
+    updataForm = document.getElementById("editInfo")
+    const updateInfo = new FormData(updataForm)
+    updateInfo.append("user_id", localStorage.getItem("user_id"))
+  
+    let editRequest = axios({
+      method: "post",
+      url: "./../apis/update-profile-user.php",
+      data: updateInfo
+    })
+  
+    editRequest.then(res => {
+      console.log(res)
+    })
+  })
 })
