@@ -12,7 +12,7 @@ document.getElementById("btn-login").addEventListener("click", function (){
     if(response.data.response=="success") {
       
       if (response.data.type == "admin") {
-        window.location.href = "./../admin/manage_users.html"
+        window.location.href = "./admin/manage_users.html"
       }
       else {
         localStorage.setItem("username", response.data.first_name);
