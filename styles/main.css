@@ -185,6 +185,9 @@ h3, h4 {
 }
 
 .reviews .content .current_user_review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--theme-color);
   margin-bottom: 20px;
   color: #FFF;
@@ -193,14 +196,16 @@ h3, h4 {
   border-radius: 8px;
 }
 
-.reviews .content .current_user_review {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .reviews .content .current_user_review > *:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.reviews .content .current_user_review .rev_rate {
+  color: gold;
+}
+
+.reviews .content .current_user_review .rev_rate >i:not(:last-child) {
+  margin-right: 5px;
 }
 
 .reviews .content .current_user_review .rev_status {
@@ -364,6 +369,16 @@ h3, h4 {
   align-items: center;
 }
 
+.user-profile .overlay {
+  top:0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.457);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+
 .user-profile .content {
   padding: 20px 0;
 }
@@ -378,13 +393,23 @@ h3, h4 {
 
 .user-profile .content .username {
   padding: 20px 0 5px;
-  color: var(--theme-color);
+  color: #000;
   font-size: 30px;
   font-weight: bold;
 }
 
 .user-profile .content .user-email {
   color: var(--text-second-color)
+}
+
+.user-profile .content .change_info #editProfile {
+  background-color: var(--theme-color);
+  color: #FFF;
+  padding: 14px 14px;
+  border: none;
+  border-radius: 2px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .separator {
@@ -414,4 +439,73 @@ h3, h4 {
 
 .user_info_details .content > div >div:first-child {
   font-weight: 600;
+}
+
+#editInfo {
+  display: none;
+  background: var(--theme-color-two);
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
+
+#editInfo .account-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#editInfo .account-header h1 {
+  margin-bottom: 5px;
+}
+
+#editInfo > div:not(:last-child)  {
+  margin-bottom: 15px;
+}
+#editInfo  > div label {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#editInfo div input:not([type="submit"]) {
+  width: 100%;
+  border: 1px solid rgb(90, 90, 90);
+  border-radius: 4px;
+  background-color: #FFF;
+  color: #000;
+  padding: 10px;
+}
+
+#editInfo >div input:not([type="submit"]):focus {
+  outline: 2px solid rgb(78, 78, 78);
+}
+
+#editInfo div input:not([type="submit"])::placeholder {
+  color: #000;
+}
+
+#editInfo .edit-info-butt {
+  display: flex;
+  justify-content: center;
+}
+
+#editInfo .edit-info-butt input {
+  background-color: var(--theme-color);
+  display: block;
+  border-radius: 3px;
+  padding: 15px 20px;
+  color: #FFF;
+  cursor: pointer;
+  /* margin: auto; */
+  border: 1px solid;
+}
+
+#editInfo .edit-info-butt input#cancelEdit {
+  background-color: #FFF;
+  border: 3px solid var(--theme-color);
+  color: var(--theme-color);
+  font-weight: bold;
+  margin-right: 10px;
 }
