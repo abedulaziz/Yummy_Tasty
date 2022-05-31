@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./../styles/normalize.css">
   <!-- main CSS styles -->
   <link rel="stylesheet" href="./../styles/main.css">
+  <!-- axios script -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <title>YummyTasty - Resturant</title>
   <link rel="icon" type="image/x-icon" href="./../assets/fav_icon/tab_favorite_icon.png">
 </head>
@@ -40,13 +42,13 @@
       <div class="content">
         
         <div class="res_profile_pic">
-          <img src="./../assets/images/falefelsahyoun.jpg" alt="">
+          <img id="resturant_img" src="./../assets/images/falefelsahyoun.jpg" alt="">
         </div>
 
         <div class="details">
-          <h1 class="res_name">lorem ipsum</h1>
-            <p class="res_address">Verdun, ABC</p>
-            <p class="res_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et ab quasi dolorum totam quam maiores magni optio placeat esse? </p>
+          <h1 class="res_name" id="resName"></h1>
+            <p class="res_address" id="resAddress"></p>
+            <p class="res_desc" id="resDescription"></p>
             <div id="res_rate"><span id="stars">3.5 </span><i class="fa-solid fa-star"></i></div>
         </div>
 
