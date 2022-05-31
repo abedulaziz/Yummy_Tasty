@@ -115,6 +115,10 @@ table#users {
 
 /* manage reviews */
 
+#reviews {
+  display: inline-block;
+}
+
 #reviews #status > div i{
   margin: 10px;
   font-size: 20px;
