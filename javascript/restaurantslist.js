@@ -1,7 +1,7 @@
 
 const resturantsList = document.getElementById("resturantsList")
 
-document.getElementById("username").textContent = localStorage.getItem("username")
+document.getElementById("username").textContent = localStorage.getItem("username").toUpperCase()  
 
 try {
   
