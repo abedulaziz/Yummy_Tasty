@@ -12,6 +12,7 @@ document.getElementById("btn-login").addEventListener("click", function (){
     if(response.data.response=="success")
     {
       localStorage.setItem("username", response.data.first_name);
+      localStorage.setItem("user_id", response.data.user_id);
       window.location.href = "pages/resturants.html";
       return false;
 

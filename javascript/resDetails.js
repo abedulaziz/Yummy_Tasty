@@ -9,47 +9,92 @@ addReview.addEventListener("click", addReviewWidget)
 }
 
 function addReviewWidget() {
-var currUserReview = document.createElement("div")
-currUserReview.classList.add("current_user_review")
 
-let reviewHead = document.createElement("h4")
-reviewHead.classList.add("rev_head")
-reviewHead.innerText = "Your Review:"
+  var currUserReview = document.createElement("div")
+  currUserReview.classList.add("current_user_review")
 
-let description = document.createElement("textarea")
-description.id = "description"
-description.setAttribute("name", "description")
+  let reviewHead = document.createElement("h4")
+  reviewHead.classList.add("rev_head")
+  reviewHead.innerText = "Your Review:"
 
-let reviewRate = document.createElement("div")
-reviewRate.classList.add("rev_rate")
-for (let i =0; i<5; i++) {
-let star =document.createElement("i")
-star.classList.add("fa-regular", "fa-star")
-reviewRate.appendChild(star)
-}
+  let description = document.createElement("textarea")
+  description.id = "description"
+  description.setAttribute("name", "description")
 
-let reviewStatus = document.createElement("div")
-reviewStatus.className = "rev_status"
+  let reviewRate = document.createElement("div")
+  reviewRate.classList.add("rev_rate")
+  for (let i =0; i<5; i++) {
+  let star =document.createElement("i")
+  star.classList.add("fa-regular", "fa-star")
+  star.id = i+1
+  reviewRate.appendChild(star)
+  }
 
-let cancel = document.createElement("div")
-cancel.className = "cancel"
-cancel.innerText = "Cancel"
-let submit = document.createElement("div")
-submit.className = "submit"
-submit.innerText = "Submit"
+  let starsRate = 1
 
-reviewStatus.appendChild(cancel)
-reviewStatus.appendChild(submit)
+  reviewRate.addEventListener("click", (ev) => {
+    if (ev.target.classList.contains("fa-star")) {
+      for (let z =0; z < parseInt(ev.target.id); z++) {
+        starsRate = parseInt(ev.target.id)
 
-currUserReview.appendChild(reviewHead)
-currUserReview.appendChild(description)
-currUserReview.appendChild(reviewRate)
-currUserReview.appendChild(reviewStatus)
+        reviewRate.children[z].classList.remove("fa-regular")
+        reviewRate.children[z].classList.add("fa-solid")
 
-reviewsContainer.insertBefore(currUserReview, reviewsContainer.firstChild)
-addReview.removeEventListener("click", addReviewWidget)
+      }
 
-submit.addEventListener("click",() => submitReview(currUserReview))
+      for (let f=parseInt(ev.target.id); f<5; f++) {
+        reviewRate.children[f].classList.add("fa-regular")
+        reviewRate.children[f].classList.remove("fa-solid")
+      }
+    }
+  })
+
+  let reviewStatus = document.createElement("div")
+  reviewStatus.className = "rev_status"
+
+  let cancel = document.createElement("div")
+  cancel.className = "cancel"
+  cancel.innerText = "Cancel"
+  let submit = document.createElement("div")
+  submit.className = "submit"
+  submit.innerText = "Submit"
+
+  reviewStatus.appendChild(cancel)
+  reviewStatus.appendChild(submit)
+
+  currUserReview.appendChild(reviewHead)
+  currUserReview.appendChild(description)
+  currUserReview.appendChild(reviewRate)
+  currUserReview.appendChild(reviewStatus)
+
+  reviewsContainer.insertBefore(currUserReview, reviewsContainer.firstChild)
+  addReview.removeEventListener("click", addReviewWidget)
+
+  submit.addEventListener("click",() => {
+    if (description.value != "") {
+      
+      console.log(starsRate)
+
+      let currReview = new FormData()
+      currReview.append("restaurant_id", localStorage.getItem("resturant_id"))
+      currReview.append("user_id", localStorage.getItem("user_id"))
+      currReview.append("description", description.value)
+      currReview.append("rate", starsRate)
+
+      let submitReq = axios({
+        method: "post",
+        url: "./../apis/add-review.php",
+        data: currReview
+      })
+
+      submitReq.then(res => {
+        reviewsContainer.removeChild(currUserReview)
+        addReview.classList.add("reviewed")
+        
+      }).catch(err => console.log(err))
+
+    }
+  })
 cancel.addEventListener("click",() => cancelReview(currUserReview))
 }
 
@@ -118,12 +163,9 @@ axios.all([resturantReq, reviewsRed]).then(axios.spread((...responses) => {
 }))
 
 
-function submitReview(container) {
-  addReview.classList.add("reviewed")
-  reviewsContainer.removeChild(container)
-  }
+
   
-  function cancelReview(container) {
-  reviewsContainer.removeChild(container)
-  addReview.addEventListener("click", addReviewWidget)
-  }
+function cancelReview(container) {
+reviewsContainer.removeChild(container)
+addReview.addEventListener("click", addReviewWidget)
+}
