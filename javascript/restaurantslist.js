@@ -44,7 +44,7 @@ try {
       describtion.className = "describtion"
   
       let resDetails = document.createElement("p")
-      resDetails.innerHTML = `<a href="./../pages/resturant_details.html">Learn More...</a>`
+      resDetails.innerHTML = `<a href="#" id="resDirector">Learn More...</a>`
       localStorage.setItem("resturant_id", i)
       resDetails.className = "res_details"
   
@@ -57,8 +57,20 @@ try {
   
       resturantsList.appendChild(rest)
 
-      }
-    });
-  } catch(err) {
-    alert("Something went wrong.")
     }
+  });
+} catch(err) {
+  alert("Something went wrong.")
+}
+
+
+
+resturantsList.addEventListener("click" , (e) => {
+  target = e.target
+  if (target.id === "resDirector") {
+    
+    localStorage.setItem("resturant_id", target.closest(".resturant").id)
+    window.location.href = "./../pages/resturant_details.html"
+  }
+
+})

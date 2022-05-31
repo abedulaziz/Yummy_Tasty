@@ -2,6 +2,8 @@
 const addReview = document.getElementById("addReview"),
       reviewsContainer = document.querySelector(".reviews .content .res_reviews")
 
+document.getElementById("username").textContent = localStorage.getItem("username")
+
 if (true) {
 
   addReview.addEventListener("click", addReviewWidget)
