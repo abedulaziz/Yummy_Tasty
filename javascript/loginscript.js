@@ -8,14 +8,18 @@ document.getElementById("btn-login").addEventListener("click", function (){
     url: './apis/login.php',
     data: formdata
   }).then(function (response){
-    console.log(response.data)
-    if(response.data.response=="success")
-    {
-      localStorage.setItem("username", response.data.first_name);
-      localStorage.setItem("user_id", response.data.user_id);
-      window.location.href = "pages/resturants.html";
-      return false;
 
+    if(response.data.response=="success") {
+      
+      if (response.data.type == "admin") {
+        window.location.href = "./../admin/manage_users.html"
+      }
+      else {
+        localStorage.setItem("username", response.data.first_name);
+        localStorage.setItem("user_id", response.data.user_id);
+        window.location.href = "pages/resturants.html";
+        return false;
+      }
     }
     else
     {

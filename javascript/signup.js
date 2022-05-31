@@ -9,8 +9,11 @@ document.getElementById("signup").addEventListener("click",  ()=> {
     data: formdata,
 
   }).then(function (response){
-    console.log(response)
+
     if (response.data.response == "success") {
+      console.log(response.data)
+      localStorage.setItem("user_id", response.data.user_id)
+      localStorage.setItem('username', response.data.name)
       alert("welcome to our site");
       window.location.href = "./resturants.html";
       return false;
