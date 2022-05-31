@@ -1,12 +1,14 @@
 
 const resturantsList = document.getElementById("resturantsList")
 
+document.getElementById("username").textContent = localStorage.getItem("username")
+
 try {
   
   axios({
   
     method: "get",
-    url: './../apis/list-restaurants.php',
+    url: 'http://localhost/Yummy_Tasty/apis/list-restaurants.php',
   
   }).then(function (response) {
     console.log(response)
@@ -16,6 +18,7 @@ try {
   
       let rest = document.createElement("div")
       rest.className = "resturant"
+      rest.id = i
       
       let resProfileImg = document.createElement("div")
       resProfileImg.className = "res_profile_img"
@@ -41,7 +44,8 @@ try {
       describtion.className = "describtion"
   
       let resDetails = document.createElement("p")
-      resDetails.innerHTML = `<a href="#">Learn More...</a>`
+      resDetails.innerHTML = `<a href="./../pages/resturant_details.html">Learn More...</a>`
+      localStorage.setItem("resturant_id", i)
       resDetails.className = "res_details"
   
       resAbout.appendChild(resName)
@@ -52,9 +56,6 @@ try {
       rest.appendChild(resAbout)
   
       resturantsList.appendChild(rest)
-  
-    
-      console.log(response.data);
 
       }
     });

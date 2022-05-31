@@ -9,8 +9,10 @@ document.getElementById("btn-login").addEventListener("click", function (){
     url: './apis/login.php',
     data: formdata
   }).then(function (response){
+    console.log(response.data)
     if(response.data.response=="success")
     {
+      localStorage.setItem("username", response.data.first_name)
       window.location.href = "pages/resturants.html";
       return false;
 
@@ -22,10 +24,3 @@ document.getElementById("btn-login").addEventListener("click", function (){
     
     }) ;
 });
-      
-// const getData = () => {
-//   axios.get("./../apis/login.php").then(res => {
-//     console.log(res)
-//   })
-// }
-// getData()

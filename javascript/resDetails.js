@@ -64,3 +64,16 @@ function cancelReview(container) {
 }
 
 
+try {
+  
+  axios({
+  
+    method: "get",
+    url: './../apis/list-restaurants.php',
+  
+  }).then(function (response) {
+    
+    });
+  } catch(err) {
+    // alert("Something went wrong.")
+    }
