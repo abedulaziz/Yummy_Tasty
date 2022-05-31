@@ -1,33 +1,20 @@
 <?php
 include("connection.php");
 
-$response = [];
-$response["response"] = "success";
-
-if(isset($_POST["fname"])){
+if(!empty($_POST["fname"])){
   $first_name = $_POST["fname"];
-}else{
-  $response["response"] = "failed";
 }
-if(isset($_POST["lname"])){
+if(!empty($_POST["lname"])){
   $last_name = $_POST["lname"];
-}else{
-  $response["response"] = "failed";
 }
-if(isset($_POST["email"])){
+if(!empty($_POST["email"])){
   $email = $_POST["email"];
-}else{
-  $response["response"] = "failed";
 }
-if(isset($_POST["password"])){
+if(!empty($_POST["password"])){
   $password = hash("sha256", $_POST["password"]);
-}else{
-  $response["response"] = "failed";
 }
-if(isset($_POST["gender"])){
+if(!empty($_POST["gender"])){
   $gender = $_POST["gender"];
-}else{
-  $response["response"] = "failed";
 }
   $phone_number = $_POST["phoneNum"];
   $type = "user";
@@ -36,6 +23,9 @@ if(isset($_POST["gender"])){
   $query->bind_param("sssssss", $first_name, $last_name, $email, $password, $gender, $phone_number, $type);
   $query->execute();;
   $response["name"] = "$first_name";
+
+  $response = [];
+  $response["response"] = "success";
   
   $json = json_encode($response);
   echo $json;

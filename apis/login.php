@@ -2,10 +2,10 @@
 
 include("connection.php");
 
-if(isset($_POST["email"])){
+if(!empty($_POST["email"])){
     $email = $_POST["email"];
 }
-if(isset($_POST["password"])){
+if(!empty($_POST["password"])){
     $password = hash("sha256", $_POST["password"]);
 }
 $query = $mysqli->prepare("SELECT user_id, first_name,type from users where email = ? AND password = ?");
