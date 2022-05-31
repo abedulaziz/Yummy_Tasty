@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./../styles/normalize.css" />
     <!-- main CSS styles -->
     <link rel="stylesheet" href="./../styles/main.css">
+    <!-- axios script -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>YummyTasty - my profile</title>
     <link rel="icon" type="image/x-icon" href="./../assets/fav_icon/tab_favorite_icon.png" />
   </head>
@@ -28,7 +30,7 @@
           <div class="logo-wrapper"><img src="./../assets/fav_icon/favorite_icon.png" alt="Yummy Tasty"></div>
   
           <div class="profile-sec">
-            Name_of_user <i class="fa-solid fa-caret-down"></i>
+            <span id="username"></span> <i class="fa-solid fa-caret-down"></i>
           </div>
   
         </div>
@@ -36,15 +38,17 @@
     </header>
 
       <div class="user-profile">
+        <div class="overlay"></div>
         <div class="container">
           <div class="content">
 
             <div class="profile_img_wrapper">
-              <img src="./../assets/user_profile_image/male_profile_image.jpg" alt="profile image">
+              <img alt="profile image">
             </div>
 
-            <div class="username">John Doe</div>
-            <div class="user-email">John.Doe@gmail.com</div>
+            <div class="username" id="usernameHead">John Doe</div>
+            <div class="user-email" id="userEmail">John.Doe@gmail.com</div>
+            <div class="change_info"><button id="editProfile">Edit Profile</button></div>
           </div>
         </div>
       </div>
@@ -100,6 +104,7 @@
       </div>
     </footer>
 
+    <script src="./../javascript/userProfile.js"></script>
   </body>
 
 </html>

@@ -185,6 +185,9 @@ h3, h4 {
 }
 
 .reviews .content .current_user_review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--theme-color);
   margin-bottom: 20px;
   color: #FFF;
@@ -193,14 +196,16 @@ h3, h4 {
   border-radius: 8px;
 }
 
-.reviews .content .current_user_review {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .reviews .content .current_user_review > *:not(:last-child) {
   margin-bottom: 10px;
+}
+
+.reviews .content .current_user_review .rev_rate {
+  color: gold;
+}
+
+.reviews .content .current_user_review .rev_rate >i:not(:last-child) {
+  margin-right: 5px;
 }
 
 .reviews .content .current_user_review .rev_status {
@@ -364,6 +369,16 @@ h3, h4 {
   align-items: center;
 }
 
+.user-profile .overlay {
+  top:0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.457);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+
 .user-profile .content {
   padding: 20px 0;
 }
@@ -378,13 +393,23 @@ h3, h4 {
 
 .user-profile .content .username {
   padding: 20px 0 5px;
-  color: var(--theme-color);
+  color: #000;
   font-size: 30px;
   font-weight: bold;
 }
 
 .user-profile .content .user-email {
   color: var(--text-second-color)
+}
+
+.user-profile .content .change_info #editProfile {
+  background-color: var(--theme-color);
+  color: #FFF;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .separator {
