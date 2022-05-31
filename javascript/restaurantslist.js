@@ -8,7 +8,7 @@ try {
   axios({
   
     method: "get",
-    url: 'http://localhost/Yummy_Tasty/apis/list-restaurants.php',
+    url: './../apis/list-restaurants.php',
   
   }).then(function (response) {
     console.log(response)

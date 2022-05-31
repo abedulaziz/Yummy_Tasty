@@ -16,6 +16,6 @@ document.getElementById("signup").addEventListener("click",  ()=> {
       window.location.href = "./resturants.html";
       return false;
     } else {
-      alert("try different email or password");
+      alert("Error! wrong input fill all the required * field");
     };})
 });

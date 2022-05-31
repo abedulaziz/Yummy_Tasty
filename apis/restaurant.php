@@ -2,7 +2,9 @@
 //restaurant
 include("connection.php");
 
-$query = $mysqli->prepare("SELECT restaurant_name,description,profile_pic,address from restaurants where restaurant_id = 1");//front
+$restaurnt_id = $_POST["restaurant_id"];
+
+$query = $mysqli->prepare("SELECT restaurant_name,description,profile_pic,address from restaurants where restaurant_id = $restaurnt_id");//front
 $query->execute();
 $query->store_result();
 $num_rows = $query->num_rows();

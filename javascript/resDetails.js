@@ -64,14 +64,15 @@ function cancelReview(container) {
   reviewsContainer.removeChild(container)
   addReview.addEventListener("click", addReviewWidget)
 }
-
+//   const formdata = new FormData();
+//   formdata.append("res",ret)
 
 try {
   
   axios({
   
-    method: "get",
-    url: './../apis/list-restaurants.php',
+    method: "post",
+    url: './../apis/restaurant.php',
   
   }).then(function (response) {
     
