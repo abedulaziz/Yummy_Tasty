@@ -43,5 +43,4 @@ const editButton = document.getElementById("editProfile")
 editButton.addEventListener("click", () => {
   overlay.style.display= "block"
 
-  
 })

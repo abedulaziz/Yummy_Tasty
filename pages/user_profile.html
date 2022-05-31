@@ -90,6 +90,45 @@
         </div>
       </div>
 
+
+      <!-- hidden form accepts data when the user clicks on edit profile button -->
+      <form id="editInfo" onsubmit="return false;">
+        <div class="sign-up_head account-header">
+          <h1>Edit your profile</h1>
+        </div>
+
+        <div class="first_name">
+
+          <label for="fname">First Name <span class="required">*</span></label><br>
+          <input type="text" name="fname" id="fname" placeholder="Your first name" required>
+
+        </div>
+
+        <div class="last_name">
+          <label for="lname">Last Name <span class="required">*</span></label><br>
+          <input type="text" name="lname" id="lname" placeholder="Your last name" required>
+        </div>
+
+        <div class="user_email">
+          <label for="email">Email <span class="required">*</span></label><br>
+          <input type="email" name="email" id="email" placeholder="Your email" required>
+        </div>
+
+        <div class="user_pass">
+          <label for="password">Password <span class="required">*</span></label>
+          <input type="password" name="password" id="password" placeholder="Create your password" required>
+        </div>
+
+        <div class="phone-num">
+          <label for="phoneNum">Phone Number (Optional)</label>
+          <input type="tel" name="phoneNum" id="phoneNum" placeholder="Your phone number">
+        </div>
+
+        <div class="edit-info-butt">
+          <input type="submit" value="Submit" id="editInfoButt">
+        </div>
+      </form>
+
     <footer>
       <div class="container">
         <div class="copy-right">
