@@ -12,9 +12,12 @@ h3, h4 {
   cursor:initial !important;
 }
 
+.res_details {
+  margin: 50px 0 40px;
+}
+
 .res_details .content{
   display: flex;
-  margin: 50px 0;
 }
 
 .res_details .content > div {
@@ -163,4 +166,17 @@ h3, h4 {
 
 .reviews .content .res_reviews .review .user_feedback {
   font-size: 18px;
+}
+
+
+/* resturant detials media queries */
+
+@media (max-width: 926px) {
+  .res_details .content {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .res_details .content > div {
+    width: 100%;
+  }
 }
