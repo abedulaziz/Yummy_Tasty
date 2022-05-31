@@ -126,9 +126,10 @@ axios.all([resturantReq, reviewsRed]).then(axios.spread((...responses) => {
   document.getElementById("resName").textContent = resturantRes.restaurant_name;
   document.getElementById("resAddress").textContent = resturantRes.address;
   document.getElementById("resDescription").textContent = resturantRes.description;
-
+  let avgReview = 0;//avarge stars
   console.log(reviewsRes)
-  for (let i =0; i< reviewsRes.length; i++) {
+  let i = 0
+  for (i =0; i< reviewsRes.length; i++) {
     let review = document.createElement('div')
     review.className = "review"
 
@@ -138,7 +139,7 @@ axios.all([resturantReq, reviewsRed]).then(axios.spread((...responses) => {
 
     let revRate = document.createElement('div')
     revRate.classList.add("review_rate")
-
+    avgReview=avgReview+reviewsRes[i].rate//avarge stars
     solidStarsCounter = 1
     for (let j = 0; j< 5; j++) {
       let star = document.createElement("i")
@@ -161,7 +162,8 @@ axios.all([resturantReq, reviewsRed]).then(axios.spread((...responses) => {
     reviewsContainer.appendChild(review)
 
   }
-
+  avgReview=avgReview/i
+  document.getElementById("stars").innerHTML = avgReview +" "
 }))
 
 
@@ -171,3 +173,8 @@ function cancelReview(container) {
 reviewsContainer.removeChild(container)
 addReview.addEventListener("click", addReviewWidget)
 }
+
+//redirect to editing profile 
+document.getElementById("username").addEventListener("click",function(){
+  window.location.href = "./user_profile.html";
+});

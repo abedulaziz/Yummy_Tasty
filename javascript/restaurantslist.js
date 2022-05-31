@@ -74,3 +74,8 @@ resturantsList.addEventListener("click" , (e) => {
   }
 
 })
+
+//redirect to editing profile 
+document.getElementById("username").addEventListener("click",function(){
+  window.location.href = "./user_profile.html";
+});
