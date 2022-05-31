@@ -6,7 +6,7 @@ $user_id = $_POST["user_id"];
 $first_name = $_POST["first_name"];
 $last_name = $_POST["last_name"];
 $email = $_POST["email"];
-$password = $_POST["password"];
+$password = hash("sha256", $_POST["password"]);
 $phone_number = $_POST["phone_number"];
 
 $query = $mysqli->prepare("UPDATE users set first_name = ?, last_name = ?, email = ?, password = ?, phone_number = ? where user_id = $user_id");
